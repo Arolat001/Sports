@@ -1,0 +1,636 @@
+* {
+    scroll-behavior: smooth;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+:root {
+    --main-color: #4169e1;
+    --sub-color: white;
+    --header-size: 30px;
+    --text-size: 20px;
+}
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Quicksand", serif;
+    font-style: normal;
+    color: #4169e1;
+}
+
+/* Logo */
+.LogoImg {
+    display: flex;
+    background-color: var(--su);
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    margin-left: 20%;
+    font-weight: bold;
+}
+
+.navigations {
+    width: 100%;
+    position: fixed;
+    background-color: var(--sub-color);
+}
+
+/* Navigation */
+.nav-bar {
+    background-color: white;
+    /* position: fixed; */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.all-link li a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.mini-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.mini-hamburger span {
+    background-color: black;
+    height: 2px;
+    width: 20px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.all-link {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 10rem;
+    text-align: center;
+}
+
+.all-link li {
+    margin-right: 20px;
+}
+.toggle-btn{
+    display: none;
+}
+/* Home Section */
+section:hover {
+    transition: 1s ease-in-out;
+}
+
+.homeImg img {
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.homeImg {
+    height: 600px;
+}
+
+.mySkills h3 {
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.mySkills h2 {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.Sk-images {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+
+}
+
+.sk-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.sk-card i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.Sk-image {
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: black;
+    width: 500px;
+    height: 500px;
+}
+
+.Sk-button {
+    text-align: center;
+    display: flex;
+    padding: 10px 40px;
+    align-items: center;
+    width: 10rem;
+    font-size: 20px;
+    margin: 5% auto;
+    background-color: #c1c1c1;
+    border-radius: 50px;
+}
+
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 768px) {
+
+    /* Logo adjustments */
+    .LogoImg {
+        margin-left: 0;
+        font-size: 24px;
+    }
+
+    /* Hamburger menu */
+    .mini-hamburger {
+        display: block;
+        margin: 10px;
+    }
+
+
+    .all-link {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding: 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .all-link li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Activate the navigation menu when clicked */
+    .nav-bar.active .all-link {
+        display: block;
+    }
+
+    .nav-bar.active .mini-hamburger span {
+        background-color: #ccc;
+    }
+
+    .nav-bar.active .mini-hamburger span:first-child {
+        transform: translateY(0) rotate(45deg);
+    }
+
+    .nav-bar.active .mini-hamburger span:last-child {
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    /* Image adjustments for small screens */
+    .homeImg img {
+        height: auto;
+        max-height: 300px;
+
+    }
+
+    /* Sk-images layout adjustments */
+    .Sk-images {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    /* Button adjustments */
+    .Sk-button {
+        width: 8rem;
+        font-size: 18px;
+    }
+}
+
+
+
+
+/* about section */
+
+h1,
+h5 {
+    text-align: center;
+}
+
+h1 {
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.about-card {
+    padding: 20px;
+    justify-content: center;
+    text-align: justify;
+    width: 100%;
+    /* max-width: 500px; */
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card li {
+    font-style: italic;
+    padding: 10px;
+}
+
+.about-img img {
+    width: 100%;
+    /* Makes the image responsive */
+    height: auto;
+    max-width: 800px;
+    border-radius: 20px;
+
+}
+
+.about-img p {
+    text-align: justify;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    /* Remove default list bullets */
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+        /* Adjust font size for smaller screens */
+    }
+
+    h5 {
+        font-size: 18px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .about-card {
+        width: 90%;
+        /* Use more width on smaller screens */
+    }
+
+    .about-img img {
+        max-width: 100%;
+        /* Allow image to scale on smaller screens */
+    }
+
+    p {
+        font-size: 16px;
+        /* Adjust text size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+        /* Adjust font size even further for small screens */
+    }
+
+    h5 {
+        font-size: 16px;
+        /* Adjust font size for very small screens */
+    }
+
+    .about-card {
+        width: 95%;
+        /* Use almost full width on the smallest screens */
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .about-img img {
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 14px;
+        /* Reduce text size for very small screens */
+    }
+}
+
+/* dark/light mode */
+
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.hold {
+    display: flex;
+    text-align: right;
+
+}
+
+button {
+    padding: 5px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 5rem;
+
+
+}
+
+
+/* button {
+padding: 10px 10px;
+font-size: 16px;
+cursor: pointer;
+background-color: lightgray;
+border: none;
+border-radius: 5px;
+transition: background-color 0.3s; */
+/* display: flex; */
+
+/* float: right; */
+/* margin-left: 70rem;
+margin-top: -90rem; */
+
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+
+    .Be-Active {
+        background-image: none;
+    }
+}
+
+button.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+
+/* Activities section */
+
+.be-actH2 {
+    text-align: center;
+    font-weight: lighter;
+}
+
+.texts {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8rem;
+}
+
+
+
+.texts p {
+    width: 50%;
+    font-size: 25px;
+    margin-left: 2rem;
+    color: blue;
+    font-weight: lighter;
+}
+
+.img-exs {
+    margin: 5% auto;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.img-exs img {
+    border-radius: 50%;
+    object-fit: contain;
+    justify-content: space-between;
+    margin-left: 2rem;
+
+}
+
+@media (max-width: 1200px) {
+    .texts {
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+
+    .texts p {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .act-h2 span {
+        width: 90%;
+    }
+
+    .texts {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+    .texts p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .act-h2 {
+        width: 100%;
+        /* Full width for mobile screens */
+    }
+
+    .texts {
+        width: 100%;
+        margin-left: 0.5rem;
+        /* Adjust margin for mobile screens */
+    }
+
+    .texts p {
+        font-size: 18px;
+        /* Adjust font size for mobile screens */
+    }
+}
+
+.Be-Active {
+    background-image: url(../Images/13338.jpg);
+}
+
+.all-bCard {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Allow items to wrap to new lines */
+}
+
+.b-card {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin: 10px;
+    /* Add margin for spacing between cards */
+}
+
+.b-card h2 {
+    font-weight: lighter;
+    font-size: 25px;
+    color: blue;
+}
+
+.b-card .img img {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .b-card {
+        width: 45%;
+        /* Adjust width for smaller screens */
+        height: auto;
+        /* Adjust height for smaller screens */
+    }
+
+    .b-card .img img {
+        width: 100%;
+        /* Make image responsive */
+    }
+}
+
+@media (max-width: 768px) {
+    .b-card {
+        width: 100%;
+        /* Full width for smaller screens */
+        height: auto;
+        /* Adjust height for smaller screens */
+    }
+
+    .b-card .img img {
+        width: 100%;
+        /* Make image responsive */
+    }
+}
+
+@media (max-width: 480px) {
+    .b-card h2 {
+        font-size: 20px;
+        /* Adjust font size for mobile screens */
+    }
+
+    .b-card .img img {
+        width: 100%;
+        /* Make image responsive */
+    }
+}
+
+.Be-act2 p {
+    text-align: center;
+    font-size: 50px;
+    width: 80%;
+    margin: 5% auto;
+    margin-top: 5rem;
+    font-weight: lighter;
+}
+
+.imgLi {
+    display: flex;
+}
+
+.imgLi .img img {
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 20rem;
+}
+
+.imgLi li {
+    margin-left: 5rem;
+    line-height: 3rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .imgLi .img img {
+        margin-left: 5rem;
+    }
+
+    .imgLi li {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .imgLi {
+        display: block;
+    }
+
+    .imgLi .img img {
+        margin-left: 0rem;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .imgLi li {
+        margin-left: 1rem;
+        line-height: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .imgLi {
+        display: block;
+    }
+
+    .imgLi .img img {
+        margin-left: 1;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .imgLi li {
+        margin-left: 0.5rem;
+        line-height: 1.5rem;
+    }
+}
