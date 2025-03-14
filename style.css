@@ -90,9 +90,7 @@ h6 {
 .all-link li {
     margin-right: 20px;
 }
-.toggle-btn{
-    display: none;
-}
+
 /* Home Section */
 section:hover {
     transition: 1s ease-in-out;
@@ -187,6 +185,9 @@ section:hover {
         padding: 20px;
         margin-left: 0;
         width: 100%;
+    }
+    .toggle-btn{
+        margin-left: 8px;
     }
 
     .all-link li {
